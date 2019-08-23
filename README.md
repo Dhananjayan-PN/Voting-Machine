@@ -1,5 +1,5 @@
 # Voting-Machine
-A Modern Electronic Voting Machine software that can be used on all situations and platforms.
+A Modern Electronic Voting Machine software that can be used for all situations and platforms.
 
 # Requirements
 1. Python 3.x
