@@ -30,11 +30,13 @@ with open("Admins.txt",'r') as file:
     admins = eval(admins)
 if username in admins.keys():
     if password==admins[username]:
-        data = {'Head_Boy': {'BHAVVYA SARNA': 6, 'DHRUV K': 2, 'KEVIN CARVALHO': 0}, 'Head_Girl': {'SNEHA ROY': 7, 'YASHASWINI GAUR': 1, 'SAFREEN AFSAL': 0}, 'Vice_Head_Boy': {'SOYAM KUMAR S': 3, 'PRATHAM RAWAL': 4, 'NIKSHEEP GRAMPUROHIT': 1}, 'Vice_Head_Girl': {'PRAGYA MISHRA': 3, 'SMRITI PREM': 3, 'MAHIKA SURI': 2}}
+        data = {'Head_Boy': {'A1': 0, 'A2': 0, 'A3': 0}, 'Head_Girl': {'B1': 0, 'B2': 0, 'B3': 0}, 'Vice_Head_Boy': {'C1': 0, 'C2': 0, 'C3': 0}, 'Vice_Head_Girl': {'D1': 0, 'D2': 0, 'D3': 0}}
         enc_data = Encryption().encrypt(str(data))
         with open("Votes_encrypted.txt",'w') as file:
-            raw_data = file.write(enc_data)
-        print("Succesfully Reformated ")
+            file.write(enc_data)
+        with open("Votes.txt",'w') as file:
+            file.write(Encryption().encrypt('0'))
+        print("Succesfully Reformated Data")
     else:
         print("Access Denied")
 else:
